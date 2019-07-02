@@ -406,7 +406,7 @@ header > nav > li:hover {
   border-radius: 5px;
   color: #ffffff;
   font-size: 10px;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
   font-weight: 300;
   letter-spacing: 2px;
@@ -661,6 +661,7 @@ footer p {
   padding: 20px;
   letter-spacing: 1px;
   font-size: 1.6rem;
+  text-align: left;
 }
 
 h1.title {
