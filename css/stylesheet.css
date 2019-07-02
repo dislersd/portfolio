@@ -758,13 +758,13 @@ p.desc {
 
 @media (max-width: 500px) {
   .hero {
-    height: 90rem;
+    height: 115rem;
     width: 100%;
   }
 
   .content {
-    margin-top: 80px;
     padding-bottom: 50px;
+    margin: 0 auto;
   }
 
   .content ul {
@@ -781,6 +781,10 @@ p.desc {
 
   .project-btns {
     width: 100%;
+  }
+
+  .introP {
+      width: 125%;
   }
 }
 
