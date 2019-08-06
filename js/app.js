@@ -1,3 +1,8 @@
+$(window).load(function() {
+    $("body").removeClass("preload");
+  });
+
+
 const background = () => {
   var canvas = document.getElementById("container");
   var clone = document.getElementById("blurCanvasBottom");
@@ -12,11 +17,11 @@ const background = () => {
   var wh = $(window).height();
   canvas.width = ww;
   canvas.height = wh;
-  var partCount = 100;
+  var partCount = 500;
   var particles = [];
 
   function particle() {
-    this.color = "rgba(255,255,255," + Math.random() + ")";
+    this.color = "rgba(100,233,200)";
     this.x = randomInt(0, ww);
     this.y = randomInt(0, wh);
     this.direction = {
@@ -25,7 +30,7 @@ const background = () => {
     };
     this.vx = 0.3 * Math.random();
     this.vy = 0.3 * Math.random();
-    this.radius = randomInt(2, 3);
+    this.radius = randomInt(1, 2);
     this.float = function() {
       this.x += this.vx * this.direction.x;
       this.y += this.vy * this.direction.y;
@@ -110,3 +115,4 @@ const background = () => {
 };
 
 $(document).ready(background);
+

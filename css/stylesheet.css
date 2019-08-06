@@ -166,11 +166,11 @@ section {
   flex-direction: column;
   align-items: center;
   padding: 100px 80px;
+  margin: 50px auto;
 }
 
 section:not(.hero):nth-child(even) {
-  background-color: hsl(219, 30%, 18%);
-  color: white;
+  background-color: rgb(202, 230, 221);
 }
 
 .grid {
@@ -191,9 +191,11 @@ hr {
 
 section h3.title {
   text-transform: capitalize;
-  font: bold 32px "Open Sans", sans-serif;
+  font: bold 42px "Open Sans", sans-serif;
+  font-weight: 800;
   margin-bottom: 30px;
   text-align: center;
+  color: rgb(50, 52, 56);
 }
 
 section p {
@@ -213,12 +215,12 @@ section p {
 /*Header Styles*/
 
 header {
-	background-color: rgba(8, 13, 31, 0.829);
+  background-color: rgba(8, 13, 31, 0.829);
   width: 100%;
-	display: flex;
+  display: flex;
   justify-content: space-between;
-	align-items: center;
-	padding: 3rem;
+  align-items: center;
+  padding: 3rem;
   color: #fff;
 }
 
@@ -233,7 +235,7 @@ header h2 {
 }
 
 header nav {
-	display: flex;
+  display: flex;
 }
 
 header nav li {
@@ -256,14 +258,22 @@ header > nav > li:hover {
   }
 }
 
+/* Body Preload */
+
+.preload * {
+  transition: none;
+}
+
 /*Hero Styles*/
 
 .hero {
   position: relative;
   justify-content: center;
   text-align: center;
-  min-height: 100vh;
+  height: 100%;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .hero .background-image {
@@ -337,18 +347,35 @@ header > nav > li:hover {
 
 .project-card {
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(26, 23, 23, 0.548);
+  /* box-shadow: 0 0 5px rgba(26, 23, 23, 0.548); */
   margin: 2rem;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  overflow: hidden;
+}
+.project-card-two {
+border-radius: 5px;
+  /* box-shadow: 0 0 5px rgba(26, 23, 23, 0.548); */
+  margin: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
 }
 
-.project-card h3 {
+.project-card h3,
+.project-card-two h3 {
   color: black;
   font-size: 2.4rem;
   padding: 1rem;
+}
+
+.project-card .project-info {
+  padding-left: 6rem;
+}
+
+.project-card-two .project-info {
+  padding-right: 6rem;
 }
 
 .project-info {
@@ -358,20 +385,18 @@ header > nav > li:hover {
   justify-content: space-evenly;
   width: 50%;
   color: black;
-  margin: 1rem;
-  margin-left: 2rem;
+  margin: 2rem;
 }
 
 .project-btns {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
-  width: 50%;
+  width: 58%;
 }
 
 .project-btns a {
   text-decoration: none;
-  
 }
 
 .project-info p {
@@ -382,25 +407,29 @@ header > nav > li:hover {
 
 .project-img {
   max-width: 500px;
+  border: 20px solid rgb(202, 230, 221);
+  margin: 10px;
   width: 100%;
-  height: 100%;
+  height: 90%;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-	display: flex;
-	/* box-shadow: 0 0 5px rgba(26, 23, 23, 0.548); */
+  display: flex;
+  /* sbox-shadow: 0 0 5px rgba(26, 23, 23, 0.548); */
   cursor: pointer;
+  transition: ease 0.6s;
 }
 
 .project-img:hover {
-  box-shadow: 0 0 12px rgba(26, 23, 23, 0.548);
+  border: 20px solid rgb(236, 164, 69);
+  position: relative;
 }
 
 .projects button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px auto;
+  margin: 10px 10px;
   background-color: #666979;
   border: 1px solid #666979;
   border-radius: 5px;
@@ -452,21 +481,20 @@ header > nav > li:hover {
 .education .grid li h4 a {
   font-size: 30px;
   margin: 10px 0;
-  color: white;
+  color: rgb(47, 50, 61);
 }
 
 .education .grid li h5 {
-  color: hsl(198, 60%, 50%);
+  color: hsl(240, 6%, 23%);
 }
 
 @media (max-width: 800px) {
   .education .grid li {
-    flex-basis: 100%;
-    padding: 20px;
+    padding: 5px;
   }
 
   .education .grid > li > ul {
-    display: none;
+      padding: 5px;
   }
 }
 
@@ -478,7 +506,7 @@ header > nav > li:hover {
 
 .education .grid > li > ul > li {
   text-align: left;
-  color: white;
+  color: rgb(4, 4, 5);
 }
 
 /*about Section*/
@@ -525,7 +553,6 @@ header > nav > li:hover {
 }
 #img-container > img {
   border-radius: 50%;
-  border: 2px solid rgba(41, 41, 49, 0.829);
   height: auto;
   width: 100%;
 }
@@ -626,25 +653,19 @@ footer p {
   overflow: hidden;
   width: 100%;
   height: 100vh;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+}
 
-  background: linear-gradient(25deg, hsl(218, 28%, 13%), hsl(217, 28%, 15%));
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
-}
-.container {
-  width: 100%;
-  height: 100%;
-}
-#blurCanvasTop {
+/* #blurCanvasTop {
   left: 0%;
   top: 0%;
 }
 #blurCanvasBottom {
   left: 50%;
   top: 0;
-}
+} */
 .content {
-  left: 15%;
-  top: 12%;
   width: 70%;
   position: absolute;
   display: flex;
@@ -655,6 +676,7 @@ footer p {
 }
 
 .introP {
+  width: 90%;
   color: rgb(245, 245, 245);
   background-color: rgba(28, 28, 29, 0.932);
   border-radius: 10px;
@@ -665,18 +687,24 @@ footer p {
 }
 
 h1.title {
-  color: white;
-  font-size: 4vw;
+  color: rgb(17, 17, 17);
+  font-size: 5vw;
   display: inline;
   font-weight: 500;
+  z-index: 200;
+  padding: 2px 2px;
+  background: #fff;
+  border-radius: 20px;
 }
 p.desc {
   position: relative;
-  width: 100%;
   font-size: 4vw;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(70, 71, 73);
   font-weight: 200;
   margin-bottom: 40px;
+  background-color: #fff;
+  padding: 2px 2px;
+  border-radius: 20px;
 }
 
 .contact li {
@@ -698,7 +726,7 @@ p.desc {
 .contact li ~ li {
   margin-left: 1vw;
 }
-.blur {
+/* .blur {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -714,7 +742,7 @@ p.desc {
   top: 100%;
   transform: rotate(20deg);
   transform-origin: 100% 0%;
-}
+} */
 
 .fa {
   color: white;
@@ -722,15 +750,25 @@ p.desc {
 }
 
 .fa:hover {
-  color:hsl(198, 60%, 50%);
+  color: hsl(198, 60%, 50%);
 }
 
 @media (max-width: 1060px) {
-  .project-card {
+  .project-card,
+  .project-card-two {
     flex-direction: column;
     width: 70%;
     align-items: center;
-    padding-top: 3.5rem;
+    padding: 3.5rem;
+  }
+
+  .project-card .project-info,
+  .project-card-two .project-info {
+    width: 100%;
+    max-width: 50rem;
+    align-items: flex-start;
+    margin-top: 5rem;
+    padding-left: 0;
   }
 
   .project-info {
@@ -749,16 +787,23 @@ p.desc {
 @media (max-width: 700px) {
   .project-btns {
     width: 100%;
+    justify-content: flex-start;
   }
 
-  .project-card {
+  .project-card,
+  .project-card-two {
     width: 90%;
   }
 }
 
+@media (max-width: 540px) {
+    #text-container > p {
+        width: 300px;
+    }
+}
+
 @media (max-width: 500px) {
   .hero {
-    height: 115rem;
     width: 100%;
   }
 
@@ -782,14 +827,15 @@ p.desc {
   .project-btns {
     width: 100%;
   }
-
-  .introP {
-      width: 125%;
-  }
 }
 
 @media (max-width: 397px) {
   header {
     padding: 2rem 5px;
   }
+
+  #text-container > p {
+      width: 300px;
+  }
+
 }

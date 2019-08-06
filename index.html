@@ -18,7 +18,7 @@
     <script src="js/app.js"></script>
 </head>
 
-<body>
+<body class="preload">
     <header>
         <nav>
             <ul class="contact">
@@ -33,30 +33,18 @@
 
 
     <section class="hero">
-        <canvas class="container" id="container" role="main"></canvas>
         <div class="content">
             <h1 class="title">Dylan Dislers</h1>
             <p class="desc">Full Stack Web Developer</p>
-            <p class="introP">Hi I'm Dylan! I've been developing websites and coding since 2014. In November of 2018 I
-                started attending the technical skills academy, Lambda School. At Lambda I have been working on various
-                projects for 40+ hours a week learning the ins and outs of full stack web development.
-                <br>
-                <br>
-                Below are a few projects I have worked on.
-            </p>
-
         </div>
-        </div>
-        <div class="blur blurTop"><canvas class="canvas" id="blurCanvasTop"></canvas></div>
-        <div class="blur blurBottom"><canvas width="1000px" height="1000px" class="canvas"
-                id="blurCanvasBottom"></canvas>
+        <canvas class="container" id="container" role="main"></canvas>
+        <div class="blur blurBottom"><canvas width="20px" height="20px" class="canvas" id="blurCanvasBottom"></canvas>
         </div>
 
     </section>
 
     <section class="projects">
-        <h3 class="title">Projects:</h3>
-        <hr>
+        <h3 class="title">Projects</h3>
 
         <div class="project-card">
             <a class="project-img-link" href="https://friendpost.netlify.com/"><img class="project-img"
@@ -73,7 +61,7 @@
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card-two">
             <a class="project-img-link" href="https://dylans-game-of-life.netlify.com/"><img class="project-img"
                     src="/img/gameoflife.png" alt=""></a>
             <div class="project-info">
@@ -106,7 +94,7 @@
             </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card-two">
             <a class="project-img-link" href="https://servesoup.design/" target="_blank"><img class="project-img"
                     src="/img/servesoup.png" alt=""></a>
             <div class="project-info">
@@ -124,12 +112,10 @@
             </div>
         </div>
 
-
     </section>
 
     <section class="education">
         <h3 class="title">Education</h3>
-        <hr>
 
         <ul class="grid">
             <li>
@@ -150,8 +136,7 @@
     </section>
 
     <section class="about">
-        <h3 class="title">About Me:</h3>
-        <hr>
+        <h3 class="title">About Me</h3>
         <div id="inner-about">
             <div id="img-container">
                 <img src="img/dyland.png">
@@ -159,10 +144,17 @@
 
             <div id="text-container">
 
-                <p>I'm a Western Washington native. I love traveling and being outdoors. I'm a Husband and father. Learning about
-                    technology really gets me excited. Currently enrolled in a Computer Science and Full Stack Developer
-                    program with Lambda School to
-                    further enhance my skillset.</p>
+                <p class="introP">My name is Dylan Dislers and I am a full-stack developer from Seattle, Washington.
+                    Learning
+                    how to code started out as a hobby for me, but I grew obsessed with building things that required
+                    both
+                    creativity and logic. Right now I am currently enrolled at Lambda School where I spend 40+ hours a
+                    week
+                    learning the latest web development trends and fundamental computer science skills to bring my
+                    projects to
+                    life.
+
+                </p>
 
             </div>
         </div>
