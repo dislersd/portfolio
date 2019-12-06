@@ -213,13 +213,13 @@ section p {
 }
 
 canvas {
-  background-color: rgb(47, 50, 58);
+  background: linear-gradient(rgb(219, 149, 84), rgb(82, 230, 161))
 }
 
 /*Header Styles*/
 
 header {
-  background-color: rgba(9, 20, 41, 0.788);
+  background-color: rgb(12, 13, 14);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -358,7 +358,7 @@ header > nav > li:hover {
   justify-content: space-evenly;
 }
 .project-card-two {
-border-radius: 5px;
+  border-radius: 5px;
   /* box-shadow: 0 0 5px rgba(26, 23, 23, 0.548); */
   margin: 2rem;
   width: 100%;
@@ -498,7 +498,7 @@ border-radius: 5px;
   }
 
   .education .grid > li > ul {
-      padding: 5px;
+    padding: 5px;
   }
 }
 
@@ -691,24 +691,20 @@ footer p {
 }
 
 h1.title {
-  color: rgb(232, 240, 237);
+  color: rgb(33, 34, 36);
   font-size: 5vw;
   display: inline;
   font-weight: 500;
   z-index: 200;
   padding: 2px 2px;
-  background: rgb(47, 50, 58);
-  border-radius: 20px;
 }
 p.desc {
   position: relative;
   font-size: 4vw;
-  color: rgb(210, 214, 223);
+  color: rgb(38, 40, 43);
   font-weight: 200;
   margin-bottom: 40px;
-  background-color:rgb(47, 50, 58);
   padding: 2px 2px;
-  border-radius: 20px;
 }
 
 .contact li {
@@ -730,7 +726,7 @@ p.desc {
 .contact li ~ li {
   margin-left: 1vw;
 }
-/* .blur {
+.blur {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -746,7 +742,7 @@ p.desc {
   top: 100%;
   transform: rotate(20deg);
   transform-origin: 100% 0%;
-} */
+}
 
 .fa {
   color: white;
@@ -801,9 +797,9 @@ p.desc {
 }
 
 @media (max-width: 540px) {
-    #text-container > p {
-        width: 300px;
-    }
+  #text-container > p {
+    width: 300px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -839,7 +835,14 @@ p.desc {
   }
 
   #text-container > p {
-      width: 300px;
+    width: 300px;
   }
+}
 
+#container {
+  background: rgb(62, 66, 73);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
 }
