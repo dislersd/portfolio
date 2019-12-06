@@ -212,10 +212,14 @@ section p {
   }
 }
 
+canvas {
+  background-color: rgb(47, 50, 58);
+}
+
 /*Header Styles*/
 
 header {
-  background-color: rgba(8, 13, 31, 0.829);
+  background-color: rgba(9, 20, 41, 0.788);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -687,22 +691,22 @@ footer p {
 }
 
 h1.title {
-  color: rgb(17, 17, 17);
+  color: rgb(232, 240, 237);
   font-size: 5vw;
   display: inline;
   font-weight: 500;
   z-index: 200;
   padding: 2px 2px;
-  background: #fff;
+  background: rgb(47, 50, 58);
   border-radius: 20px;
 }
 p.desc {
   position: relative;
   font-size: 4vw;
-  color: rgb(70, 71, 73);
+  color: rgb(210, 214, 223);
   font-weight: 200;
   margin-bottom: 40px;
-  background-color: #fff;
+  background-color:rgb(47, 50, 58);
   padding: 2px 2px;
   border-radius: 20px;
 }
@@ -716,7 +720,7 @@ p.desc {
 }
 .contact li a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.89);
   opacity: 0.75;
 }
 .contact li a:hover {

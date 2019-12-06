@@ -21,15 +21,16 @@ const background = () => {
   var particles = [];
 
   function particle() {
-    this.color = "rgba(100,233,200)";
+    colors = ["rgba(100,233,200)", "rgba(100,200,233)", "rgba(100,100,233)"];
+    this.color = colors[Math.floor(Math.random() * colors.length)]
     this.x = randomInt(0, ww);
     this.y = randomInt(0, wh);
     this.direction = {
       x: -1 + Math.random() * 2,
       y: -1 + Math.random() * 2
     };
-    this.vx = 0.3 * Math.random();
-    this.vy = 0.3 * Math.random();
+    this.vx = 0.4 * Math.random();
+    this.vy = 0.4 * Math.random();
     this.radius = randomInt(1, 2);
     this.float = function() {
       this.x += this.vx * this.direction.x;
