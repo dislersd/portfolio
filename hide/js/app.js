@@ -1,6 +1,6 @@
-// $(window).load(function() {
-//   $("body").removeClass("preload");
-// });
+$(window).load(function() {
+  $("body").removeClass("preload");
+});
 
 const background = () => {
   //   var canvas = document.getElementById("container");
@@ -54,6 +54,7 @@ const background = () => {
   //         this.changeDirection("y");
   //       }
   //     };
+  
   //     this.draw = function() {
   //       ctx.beginPath();
   //       ctx.fillStyle = this.color;
